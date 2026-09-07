@@ -10,7 +10,7 @@ Wanderlust allows users to discover unique destinations, create their own listin
 
 🚀 Live Website: https://wanderlust-project-rgiu.onrender.com
 
-💻 GitHub Repository: https://github.com/gauravkumar-codes/wanderlust-vacation-rental-website
+💻 GitHub Repository: https://github.com/gauravkumar-codes/wanderlust-vacation-rental-website.git
 
 ---
 
@@ -221,7 +221,7 @@ Wanderlust/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/gauravkumar-codes/wanderlust-vacation-rental-website
+git clone https://github.com/gauravkumar-codes/wanderlust-vacation-rental-website.git
 ```
 
 ### 2️⃣ Navigate to the Project Directory
