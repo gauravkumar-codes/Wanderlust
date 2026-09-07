@@ -4,7 +4,7 @@ if (process.env.NODE_ENV != "production") {
 
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose');
+const mongoose = require('mongoose');  // mongoose is a library that allows us to interact with MongoDB in a more structured way. It provides a schema-based solution to model our application data, making it easier to define the structure of our documents and perform CRUD operations.
 const path = require('path');
 const methodOverride = require('method-override');
 const ejsMate = require('ejs-mate');
@@ -28,6 +28,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 
 const dbUrl = process.env.ATLASDB_URL;
+// const MONGO_URL = 'mongodb://localhost:27017/wanderlust';
 
 main()
     .then(() => {
@@ -39,6 +40,7 @@ main()
 
 async function main() {
     await mongoose.connect(dbUrl);
+    // await mongoose.connect(MONGO_URL);
 }
 
 const store = MongoStore.create({
