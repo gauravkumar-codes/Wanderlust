@@ -1,3 +1,11 @@
+// This file defines the validation schemas for listings and reviews using the Joi library. The schemas specify the expected structure and validation rules for the data submitted when creating or updating listings and reviews in the Wanderlust application.
+
+// The listingSchema defines the structure and validation rules for a listing object. It requires the title, price, description, location, country, image (with optional filename and URL), and category fields. The category field is validated against a predefined set of valid categories.
+
+// The reviewSchema defines the structure and validation rules for a review object. It requires the comment and rating fields, with the rating being a number between 1 and 5.
+
+// These schemas can be used in middleware functions to validate incoming data before processing it further in the application.
+
 const joi = require("joi");
 
 const listingSchema = joi.object({

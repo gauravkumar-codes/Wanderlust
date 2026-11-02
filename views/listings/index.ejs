@@ -113,7 +113,7 @@
         <% for (let listing of allListings) { %>
             <a href="/listings/<%= listing._id %>" style="text-decoration: none;">
                 <div class="card col listing-card">
-                    <img src="<%= listing.image.url %>" class="card-img-top " alt="listing_image">
+                    <img src="<%= listing.image.url.replace('/upload/', '/upload/w_600,q_auto,f_auto/') %>" loading="lazy" class="card-img-top" alt="listing_image">
                     <div class="card-img-overlay"></div>
                     <div class="card-body">
                         <p class="card-text">
@@ -128,6 +128,29 @@
             </a>
         <% } %>
     </div>
+
+    <% if (allListings.length === 0) { %>
+        <p class="text-center text-muted mt-5">No listings found.</p>
+    <% } %>
+
+    <% if (totalPages > 1) { %>
+        <% const pageLink = (n) => `/listings?${baseQuery ? baseQuery + '&' : ''}page=${n}`; %>
+        <nav aria-label="Listings pages" class="mt-4">
+            <ul class="pagination justify-content-center">
+                <li class="page-item <%= currentPage === 1 ? 'disabled' : '' %>">
+                    <a class="page-link" href="<%= pageLink(currentPage - 1) %>">Previous</a>
+                </li>
+                <% for (let n = 1; n <= totalPages; n++) { %>
+                    <li class="page-item <%= n === currentPage ? 'active' : '' %>">
+                        <a class="page-link" href="<%= pageLink(n) %>"><%= n %></a>
+                    </li>
+                <% } %>
+                <li class="page-item <%= currentPage === totalPages ? 'disabled' : '' %>">
+                    <a class="page-link" href="<%= pageLink(currentPage + 1) %>">Next</a>
+                </li>
+            </ul>
+        </nav>
+    <% } %>
 
     <script>
         let taxSwitch = document.getElementById("flexSwitchCheckDefault");

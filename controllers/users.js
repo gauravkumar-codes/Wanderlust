@@ -1,5 +1,7 @@
 const User = require("../models/users");
 
+// This file defines the controller functions for handling user-related operations in the Wanderlust application. It includes functions for rendering the sign-up and login forms, processing user registration and login, and handling user logout. Each function is responsible for processing the request, interacting with the database, and rendering the appropriate response or view.
+
 module.exports.renderSignUpForm = (req, res) => {
     res.render('users/signup.ejs');
 };
