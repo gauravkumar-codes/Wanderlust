@@ -41,7 +41,7 @@
 | | Link |
 |---|---|
 | 🚀 **Live Website** | https://wanderlust-project-rgiu.onrender.com |
-| 💻 **GitHub Repository** | https://github.com/gauravkumar-codes/wanderlust-vacation-rental-website |
+| 💻 **GitHub Repository** | https://github.com/gauravkumar-codes/wanderlust |
 
 > ⏳ The app is hosted on a free Render instance, so the first request after a period of inactivity may take a few seconds while the server wakes up.
 
